@@ -2,7 +2,7 @@ import axios from 'axios';
 import { API_NOTIFICATION, SERVICE_URLS } from '../constants/config';
 import { getAccessToken, getType } from '../utils/common-utils';
 
-const url = import.meta.env.VITE_APP_BASE_URL || 'http://localhost:5000';
+const url = import.meta.env.VITE_APP_BASE_URL || 'https://blog-application-3-54dm.onrender.com';
 const axiosInstance = axios.create({
     baseURL: url,
     timeout: 10000,
