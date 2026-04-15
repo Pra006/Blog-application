@@ -1,7 +1,7 @@
 import { GridFSBucket } from 'mongodb';
 import mongoose from 'mongoose';
 
-const url = 'http://localhost:5000';
+const url = 'https://blog-application-1-boor.onrender.com';
 let GridfsBucket;
 const conn = mongoose.connection;
 conn.once('open', () => {

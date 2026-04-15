@@ -8,7 +8,7 @@ import bodyParser from 'body-parser';
 dotenv.config();
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 
 app.use(cors());
@@ -21,11 +21,7 @@ app.use(bodyParser.urlencoded({
 app.use('/file', express.static('uploads')); // Serve static files from the 'uploads' directory
 app.use('/', Router);
 
-const username = process.env.DB_USERNAME;
-const password = process.env.DB_PASSWORD;
-
-
-Connection(username, password);
+Connection();
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
